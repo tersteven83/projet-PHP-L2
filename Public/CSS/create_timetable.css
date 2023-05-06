@@ -1,0 +1,32 @@
+*{
+    font-family: sans-serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    margin: 20px;
+}
+table{
+    margin: 25px;
+}
+.enregistrer{
+    padding: 20px 40px;
+    display:flex ;
+    justify-content: right;
+}
+#btn{
+    padding: 15px 32px;
+    font-size: 17px;
+    font-weight: bold;
+}
+table, th,tr,td{
+    padding:9px 20px ;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+select{
+    border: none;
+    background-color: inherit;
+}

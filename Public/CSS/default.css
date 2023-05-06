@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto repeat(3, 24%);
+    grid-template-rows: 8% 10% auto;
+    grid-template-areas: 
+    'navbar navbar navbar navbar'
+    'sidebar smallMain smallMain smallMain'
+    'sidebar main main main'
+    ;
+    gap: 10px;
+    animation: transitionIn 0.5s;
+}
+nav{
+    grid-area: navbar;
+    background-color: #03254E;
+}
+aside{
+    grid-area: sidebar;
+    width: 100%;
+    height: 100%;
+    background-color: #03254E;
+    color: aliceblue;
+    border-radius: 0px 40px 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about{
+    grid-area: smallMain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px 0px 0px 40px;
+    background-color: aliceblue;
+}
+main{
+    grid-area: main;
+    border-radius: 40px 0px 0px 40px;
+    background-color: aliceblue;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar>a{
+    text-decoration: none;
+    margin: 30px;
+    color: rgb(185, 193, 200);
+    font-size: 20px;
+}
+.navbar >a{
+    position: relative;
+    text-decoration: none;
+    margin: 15px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(197, 189, 189);
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+}
+.navbar >a:after{
+    content: "";
+    position: absolute;
+    background-color: #ebf0f3;
+    height: 3px;
+    width: 0;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar >a:hover{
+    color: #ebf0f3;
+    cursor: pointer;
+}
+.navbar >a:hover:after{
+    width: 100%;
+}
+.profileContent{
+    display: flex;
+    flex-direction: column;
+}
+.profileContent>a{
+    margin: 15px;
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+    color: white;
+}
+.profileContent>a:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.profileContent>p{
+    margin: 15px;
+}
+.btn{
+    color: white;
+    background-color: #03254E;
+    font-weight: bold;
+    margin: 50px;
+    padding: 12px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: #03254E;
+    transition: 0.5s ease-in-out;   
+}
+.main{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.main>p{
+    margin: 20px;
+    color: black;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
